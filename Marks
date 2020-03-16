@@ -1,0 +1,43 @@
+publicclass Marks {
+    publicstaticvoid main(String[] args) {
+        java.util.Scannerin = newjava.util.Scanner(System.in); // Initializing Scanner
+        System.out.println("Enter Array Length"); // Getting array length
+        intsize = in.nextInt();
+        int[] first = newint[size]; // Initializing arrays
+        int[] second = newint[size + 1];
+        //int[] third = new int[size - 1];
+        System.out.println("Enter array elements");
+        for (inti = 0; i<size; i++) // Reading Elements in array
+        {
+            first[i] = in.nextInt();
+        }
+        System.out.println("Enter element to  be added:");
+        intmark = in.nextInt();  //read the mark from console
+        System.out.println("Enter position where element to be added:");
+        intpos = in.nextInt();  // takes the where it add
+        System.out.println("Before adding");
+        System.out.print("[ ");
+        for (inti :first)  // Printing inserted element data 
+        { 
+            System.out.print(i + " ");
+        }
+        System.out.println("]");
+        for (inti = 0; i<pos; i++) 
+        {
+            second[i] = first[i]; // Assigning values in array first to array second uptopos-position
+        }
+        second[pos - 1] = mark; // Assigning element to the given position
+
+        for (inti = pos; i<size + 1; i++) {
+            second[i] = first[i - 1];
+        }
+        System.out.println("After adding:");
+        System.out.print("[ ");
+        for (inti :second)  // Printing inserted element data 
+        { 
+            System.out.print(i + " ");
+        }
+        System.out.println("]");
+        in.close();
+    }
+}
