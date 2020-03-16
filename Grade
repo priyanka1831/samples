@@ -1,0 +1,157 @@
+class Scholar {
+    //Declaring Variables
+    private String name;
+    private String id;
+    privateintphysics;
+    privateintchemistry;
+    privateintmathamatics;
+    privateintbiology;
+    privateintcomputer;
+    privatedoublepercentage;
+    privatechargrade;
+    
+    publicScholar(String name, String id, intphysics, intchemistry, intmathamatics, intbiology, intcomputer) {
+    super();    
+    //Assigning given inputs to the variables using this key words 
+    this.name = name;
+    this.id = id;
+    this.physics = physics;
+    this.chemistry = chemistry;
+    this.mathamatics = mathamatics;
+    this.biology = biology;
+    this.computer = computer;
+    inttotalMarks = physics + chemistry + mathamatics + biology + computer;  // Adding total marks
+    this.percentage = (totalMarks / 5);  //calculating percentage
+    this.grade = grade(percentage);  // Calling percentage method
+    }
+        //  All the variables are in private so getter setter methods are used for setting the values and getting the values
+    public String getName() {
+    returnname;
+    }
+
+    publicvoidsetName(String name) {
+    this.name = name;
+    }
+
+    public String getId() {
+    returnid;
+    }
+
+    publicvoidsetId(String id) {
+    this.id = id;
+    }
+
+    publicintgetPhysics() {
+    returnphysics;
+    }
+
+    publicvoidsetPhysics(intphysics) {
+    this.physics = physics;
+    }
+
+    publicintgetChemistry() {
+    returnchemistry;
+    }
+
+    publicvoidsetChemistry(intchemistry) {
+    this.chemistry = chemistry;
+    }
+
+    publicintgetMathamatics() {
+    returnmathamatics;
+    }
+
+    publicvoidsetMathamatics(intmathamatics) {
+    this.mathamatics = mathamatics;
+    }
+
+    publicintgetBiology() {
+    returnbiology;
+    }
+
+    publicvoidsetBiology(intbiology) {
+    this.biology = biology;
+    }
+
+    publicintgetComputer() {
+    returncomputer;
+    }
+
+    publicvoidsetComputer(intcomputer) {
+    this.computer = computer;
+    }
+
+    publicdoublegetPercentage() {
+    returnpercentage;
+    }
+
+    publicvoidsetPercentage(doublepercentage) {
+    this.percentage = percentage;
+    }
+
+    publicchargetGrade() {
+    returngrade;
+    }
+
+    publicvoidsetGrade(chargrade) {
+    this.grade = grade;
+    }
+        // Overriding to string method without this method only object values will print
+    @Override
+    public String toString() {
+    return"Id : " + id + ",  name : " + name + ",  Grade : " + grade ;
+    }
+
+    privatechargrade(doublepercentage) 
+    {
+    if (percentage>= 90) 
+    {
+        return'A';
+    }
+    if (percentage>= 80) 
+    {
+        return'B';
+    }
+    if (percentage>= 70) 
+    {
+        return'C';
+    }
+    if (percentage>= 60) 
+    {
+        return'D';
+    }
+    if (percentage>= 40) 
+    {
+        return'E';
+    } 
+    return'F';
+    }
+}
+publicclass Grade 
+{
+    publicstaticvoid main(String[] args) 
+    {
+        java.util.Scannerin = newjava.util.Scanner(System.in);  // Scanner Class
+        System.out.println("Enter scholar name");  
+        String name = in.nextLine();  // Takes scholar name from console
+        System.out.println("Enter scholar id");
+        String id = in.nextLine();  // Takes scholar id from console 
+        System.out.println("Enter marks of 5 Subjects");
+        System.out.println("Enter maths marks of scholar");     
+        intmaths = in.nextInt();      //Takes maths marks
+        System.out.println("Enter physics marks of scholar");
+        intphysics = in.nextInt();  //Takes physics marks
+        System.out.println("Enter chemistry marks of scholar");
+        intchemistry = in.nextInt();  // takes chemistry marks
+        System.out.println("Enter biology marks of scholar");
+        intbiology = in.nextInt();  // takes biology marks
+        System.out.println("Enter computer marks of scholar");
+        intcomputer = in.nextInt();  // takes computer marks
+        Scholar scholar = newScholar(name, id, physics, chemistry, maths, biology, computer);  //passing given arguments to the constructor 
+        System.out.println("[  "+scholar.toString() +"  ]");  
+        in.close();
+    }
+}
+
+
+
