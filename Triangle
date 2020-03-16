@@ -1,0 +1,27 @@
+publicclass Triangle {
+
+    publicstaticvoid main(String[] args) {
+        java.util.Scannerin = newjava.util.Scanner(System.in);
+        intsides = 3;
+        intsum = 0;
+        intarr[] = newint[sides];
+        System.out.println("Enter 3 angles :");//taking values from console
+        for (inti = 0; i<sides; i++) {
+            arr[i] = in.nextInt();
+
+        }
+        for (intj :arr) // adding the array values
+        {
+            sum = sum + j;
+        }
+        if (sum == 180) 
+        {  
+            System.out.println("Triangle");
+        } 
+        else
+        {
+            System.out.println("not a Triangle");
+        }
+        in.close();
+    }
+}
