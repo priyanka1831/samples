@@ -1,0 +1,35 @@
+publicclassStringToArray {
+    publicstaticvoid main(String[] args) {
+        java.util.Scannerin = newjava.util.Scanner(System.in);
+        System.out.println("Enter the number of names");
+        intnumber = in.nextInt(); // Takes number of names
+        intcount = 0;
+        String[] names = new String[number];  //Declaring array size
+        String[] copy = new String[number];  //Declaring array size 
+        System.out.println("Enter there names:");
+        for (inti = 0; i<number; i++) 
+        {
+            names[i] = in.next();  //Taking names from console and Assigning names to names array
+        }
+        for (inti = 0; i<number; i++) 
+        {
+            if ((names[i].charAt(0)) == 's' || (names[i].charAt(0)) == 'S')   // If the names Starting with 'S' or 's' it enters into if statement
+            {
+                copy[count] = names[i];  //copying that name to copy array 
+                count++; //Incremented the count to know how many names are starting with S or s 
+            }
+        }
+        System.out.println("Array 1 elements are"); 
+        for (inti = 0; i<number; i++)  
+        {
+            System.out.println(names[i]);  // to print 1st array elements
+        }
+        System.out.println("Array 2 elements are");
+        for (inti = 0; i<count; i++) 
+        {
+            System.out.println(copy[i]);  // to print copy array elements
+        }
+        in.close(); // closing Scanner class
+    }
+}
+
