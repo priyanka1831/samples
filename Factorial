@@ -1,0 +1,30 @@
+publicclassFactorial{
+    publicstaticvoidmain(String args[]){  
+        java.util.Scannerin = newjava.util.Scanner(System.in);  // Scanner class
+        intfact1=1;
+        intfact2=1;
+        intfact3=1;
+        intfact4=1;
+        intnumber1=in.nextInt();//taking number to calculate factorial  
+        intnumber2=in.nextInt();
+        intnumber3=in.nextInt();
+        intnumber4=in.nextInt();
+        for(inti=1;i<=number1;i++){    
+            fact1=fact1*i;    
+        }
+        for(inti=1;i<=number2;i++){    
+            fact2=fact2*i;    
+        }
+        for(inti=1;i<=number3;i++){    
+            fact3=fact3*i;    
+        }
+        for(inti=1;i<=number4;i++){    
+            fact4=fact4*i;    
+        }
+        System.out.println("Factorial of "+number1+" is: "+fact1);
+        System.out.println("Factorial of "+number2+" is: "+fact2);
+        System.out.println("Factorial of "+number3+" is: "+fact3);
+        System.out.println("Factorial of "+number4+" is: "+fact4);
+        in.close();
+    }  
+}
