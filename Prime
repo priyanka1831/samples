@@ -1,0 +1,25 @@
+publicclass Prime {
+    publicstaticvoid main(String[] args) {
+        java.util.Scannerin = newjava.util.Scanner(System.in); // Scanner class
+        System.out.println("Input any Integer : ");
+        intnumber = in.nextInt();  // Taking input from console
+        intcount=0; //Initializing count value to 0
+        for (inti = 2; i<= number / 2; i++)   // for loop to check the number is prime or not
+        {
+            if(number%i==0)  // if the number is divided by any of the number it will enters into if condition
+            {
+                count++; // incremented the count value 
+            }
+        }
+        if(count==0)  // if the number is not incremented it enters to  if statement
+        {
+            System.out.println(number+"p"); // printing the number is prime
+        }
+        else// if count value is incremented 
+        {
+            System.out.println(number+" not prime");  // printing not prime
+        }
+        in.close();  // closing Scanner class
+    }
+}
+
