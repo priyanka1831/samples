@@ -1,0 +1,42 @@
+publicclassSelectionSort
+{
+    publicstaticint[] selectionSort(intdata[])
+    {
+        for(inti=0; i<=data.length-1;i++)  //for loop for comparing one element to another element
+        {
+            intindex = i; // copying i value to index value
+            for(intj= i+1; j<data.length;j++)  // for loop for comparing the element with another element
+            if(data[j] <data[index])  // checking the element with another element if condition is true it enters into if statement
+                index=j;  // changing the index value
+            intsmallerNumber = data[index]; //Swapping the numbers
+            data[index] = data[i];
+            data[i] = smallerNumber;
+        }
+        returndata;  // returns the data 
+    }
+    
+    privatestaticvoid display(int[]data)  // Display method to print all the sorted numbers
+    {
+    System.out.println("After Selection Sort");
+    for(inti : data)  // enhanced for loop for printing sorted elements
+    {
+            System.out.print(i+"  "); //prints the Sorting elements 
+    }
+    }
+    
+    publicstaticvoid main(String[] args) 
+    {
+        java.util.Scannerin= newjava.util.Scanner(System.in);  // Scanner class
+        System.out.println("Enter the size of array");
+        intsize= in.nextInt();  //Taking Size of array
+        System.out.println("Enter array elements");
+        int[] data = newint[size];  // Initializing array
+        for(inti=0;i<size;i++)  // Storing array elements
+        {
+            data[i]= in.nextInt();
+        }
+        int[] sortedData = selectionSort(data);  // calling Selection Sort method
+        display(sortedData);  // calling display method 
+        in.close();
+    }
+}
