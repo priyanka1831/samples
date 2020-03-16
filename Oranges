@@ -1,0 +1,33 @@
+Public class Oranges {
+    publicstaticvoid main(String[] args) {
+        java.util.Scannerin = newjava.util.Scanner(System.in);// Scanner class
+System.out.print("Enter the number of oranges :");
+        intoranges = in.nextInt();
+        intgross=0,orange=0, dozen=0, temp = 0;//               Initialize of variables
+        if (oranges>= 144)  // Calculate the gross
+        {
+            gross = oranges / 144;
+            temp = oranges % 144;
+            if (temp>= 12)  // Calculate the dozens
+            {
+                dozen = temp / 12;
+                orange = temp % 12;  // Calculate the remaining oranges and dividing in dozens
+            }
+            if (temp< 12)  // Calculate the remaining oranges
+            {
+                orange = temp;
+            }
+        }
+        if (oranges< 144 &&oranges>= 12)  // Calculate the dozens if given value is below 144 and above 12 
+        {
+            dozen = oranges / 12;
+            orange = oranges % 12;  // Calculate the remaining oranges if given value is above 12
+        }
+        if (oranges< 12) 
+        {
+            orange = oranges;  // If the given oranges is below 12 the given value printed
+        }
+        System.out.println("Your number of oranges is " + gross + " Gross, " + dozen + " dozens, and " + orange);
+        in.close();  // Closing Scanner class
+    }
+}
