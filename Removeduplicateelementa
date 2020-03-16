@@ -1,0 +1,50 @@
+
+publicclassRemoveDuplicateElements
+    {
+        publicstaticvoid main(String[] args) {
+        RemoveDuplicateElementsrde = newRemoveDuplicateElements();
+        rde.duplicate();
+    }
+        voidduplicate() 
+        {
+            java.util.Scannerin = newjava.util.Scanner(System.in);  // Scanner class
+            int[] arr_elements = newint[20]; // Array instantiation
+            intinitial_element, next_element;
+            System.out.print("Enter array size: ");
+            intarr_size = in.nextInt();  //taking array size
+            for (inti = 0; i<arr_size; ++i) // Loop to take array input elements
+            {
+                arr_elements[i] = in.nextInt();
+            }
+        System.out.println("Before removing duplicate element array are :");
+        // Loop for displaying array elements 
+        for (inti = 0; i<arr_size; ++i)   //for to print before removing duplicate elements
+        {
+            System.out.print(arr_elements[i]+"  "); 
+        }
+        System.out.println();
+        System.out.println("After removing duplicate element array are :");
+        for (initial_element = 0; initial_element<arr_size; ++initial_element)  // for loop for checking duplicate elements 
+        {
+            for (next_element = initial_element + 1; next_element<arr_size;)   
+            {
+                if (arr_elements[initial_element] == arr_elements[next_element]) // It will checks the array elements with another elements
+                {
+                    for (inttemp = next_element; temp<arr_size; ++temp)  
+                    {
+                        arr_elements[temp] = arr_elements[temp + 1];
+                    }
+                    arr_size = arr_size - 1;
+                } else
+                    next_element++;
+            }
+        }
+
+        
+        for (inti = 0; i<arr_size; ++i) 
+        {
+            System.out.print(arr_elements[i]+"  ");  // Loop to display array after removing duplicate element 
+        }
+        in.close();
+    }
+}
