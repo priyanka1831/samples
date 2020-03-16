@@ -1,0 +1,42 @@
+publicclassMaxAndMin {
+
+     publicstaticvoid main(String[] args) {
+            java.util.Scannerin = newjava.util.Scanner(System.in);  // Scanner class
+            System.out.println("Enter the length of the array :");
+            intlength = in.nextInt();  // takes array size
+            int [] array = newint[length];  // initializing array size
+            System.out.println("Enter the elements of the array:");
+            for(inti=0; i<length; i++ ) // reading array elements
+              {
+        array[i] = in.nextInt();
+              }
+            intmax = getMax(array);  // calling max method
+            intmin = getMin(array);  // calling min method
+            System.out.println("Max = " + max + " & " + "Min= " + min);  // printing maximum and minimum value
+            in.close(); // closing scanner class
+    }
+    publicstaticintgetMax(int[] inputArray)  // calculating maximum value method
+    {
+        intmaxValue = inputArray[0];
+        for (inti = 0; i<inputArray.length; i++) 
+        {
+            if (inputArray[i] >maxValue) // checking maximum value in the array
+            {
+                maxValue = inputArray[i];  // storing the maximum value
+            }
+        }
+            returnmaxValue;  // returns the maximum value
+        }
+
+        publicstaticintgetMin(int[] inputArray) {  // minimum value method
+            intminValue = inputArray[0];
+            for (inti = 0; i<inputArray.length; i++) 
+            {
+                if (inputArray[i] <minValue)  // checking minimum value in the array 
+                {
+                    minValue = inputArray[i];  // storing minimum value
+                }
+            }
+            returnminValue;  // returns minimum value
+    }
+}
