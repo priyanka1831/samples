@@ -1,0 +1,22 @@
+publicclassArrayEqual {
+    publicstaticvoid main(String[] args) {
+        System.out.println("Enter the Array1 values");
+    java.util.Scannerin= newjava.util.Scanner(System.in);
+    intarray1=in.nextInt();
+    intArr1[]=newint [array1];
+    System.out.println("Enter the Array2 values");
+    java.util.Scannerin2= newjava.util.Scanner(System.in);
+    intarray2=in2.nextInt();
+    intArr2[]=newint[array2];
+    if( java.util.Arrays.equals(Arr1, Arr2))
+           {
+        System.out.println("equals"); 
+           }
+    else
+           {
+        System.out.println("not equals");
+           }
+    in.close();
+    in2.close();
+    }
+}
